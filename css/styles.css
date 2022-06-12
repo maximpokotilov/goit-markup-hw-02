@@ -1,18 +1,511 @@
-body {
-    background-color: tomato;
+:root {
+    --primary-text-color: #212121;
+    --second-text-color: #2196f3;
+    --second-text-logo-color: #ffffff;
+    --background-head-color: #ffffff;
+    --background-work-color: #e5e5e5;
+    --background-comand-color: #f5f4fa;
+    --background-footer-color: #2f303a;
+    --p-text-color: #757575;
+    --grey-color: rgba(236, 236, 236, 1);
+    --footer-conts-color: rgba(255, 255, 255, 0.6);
 }
 
-.page-header {}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    /*background-color: lightgreen; фоновий колір, щоб були видні білі елементи макета*/
+}
 
-.logo-link {}
+/*------------------ глобальні зміни ------------------*/
 
-.logo {}
+li {
+    list-style: none;
+}
 
-.logo-accent {}
+ul {
+    padding: 0px;
+    list-style: none;
+}
 
-.site-nav {}
+a {
+    text-decoration: none;
+}
 
-.contact-nav {}
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+    margin: 0;
+}
 
-.contact-link {}
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 
+    /*outline: 1px solid rgb(250, 5, 5);*/
+}
+
+/*------------------ Page header section ------------------*/
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-header {
+    background: var(--background-head-color);
+    border-bottom: 1px solid #ececec;
+
+    /*outline: 1px solid green;*/
+}
+
+.page-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 93px;
+}
+
+.site-nav .site-nav-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contact-nav {
+    display: flex;
+}
+
+.contact-nav .contact-nav-item+.contact-nav-item {
+    margin-left: 50px;
+}
+
+/*------------------ Hero section ------------------*/
+
+.hero-box {
+    height: 600px;
+    background: #2f303a;
+    padding-top: 200px;
+}
+
+/*------------------ Advantages section ------------------*/
+
+
+
+/*------------------ What are we doing section ------------------*/
+
+.work-photos-section {
+    padding-top: 94px;
+}
+
+/*------------------ Team section ------------------*/
+.team-box {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    background: var(--background-comand-color);
+}
+
+/*------------------ Footer section ------------------*/
+.box-footer {
+    background: var(--background-footer-color);
+    height: 252px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/*------------------ logo main and footer ------------------*/
+
+.logo-link,
+.logo-footer,
+.logo-accent,
+.logo-accent-footer {
+    font-family: Raleway;
+    font-weight: 700;
+    font-style: inherit;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+
+.logo-link {
+    color: var(--second-text-color);
+    text-decoration: none;
+
+    /*outline: 1px solid rgb(245, 8, 8);
+  background-color: rgb(255, 251, 0);*/
+}
+
+.logo-accent {
+    color: var(--primary-text-color);
+    text-decoration: none;
+
+    /*outline: 1px solid red;*/
+}
+
+.logo-footer {
+    display: flex;
+    color: var(--second-text-color);
+    text-decoration: none;
+
+
+    /*outline: 1px solid rgb(245, 8, 8);
+  background-color: rgb(255, 251, 0);*/
+}
+
+.logo-accent-footer {
+    color: var(--second-text-logo-color);
+
+    /*outline: 1px solid green;*/
+}
+
+/*------------------ Navigation to other pages ------------------*/
+
+.site-nav-link {
+    color: var(--primary-text-color);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    /*outline: 1px solid green;*/
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.site-nav-link:hover,
+.site-nav-link:focus {
+    color: var(--second-text-color);
+}
+
+/*------------------ Contacts ------------------*/
+.contact-link {
+    display: block;
+
+    color: var(--p-text-color);
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    /*outline: 1px solid green;*/
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--second-text-color);
+}
+
+/*------------------ Footer contacts section ------------------*/
+
+.footer-conts-adress-color,
+.footer-conts-color {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+}
+
+.footer-conts-adress-color {
+    color: var(--background-head-color);
+    padding-top: 20px;
+    margin-bottom: 9px;
+}
+
+.footer-conts-color,
+.footer-conts-section {
+    color: var(--footer-conts-color);
+}
+
+.footer-conts-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-conts-item {
+    margin-bottom: 9px;
+}
+
+/*------------------ Hero ------------------*/
+.hero-section-title {
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--background-head-color);
+    margin-bottom: 30px;
+}
+
+/*------------------ Hero button ------------------*/
+.hero-button {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--background-head-color);
+    background: var(--second-text-color);
+    border-color: transparent;
+    border-radius: 4px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 32px;
+}
+
+/*------------------ Advantages ------------------*/
+
+.advantages {
+    padding: 91px 0px;
+}
+
+.advantages-list {
+    display: flex;
+    justify-content: center;
+}
+
+.advantages-section {
+    margin: 0px 45px 0px 0px;
+}
+
+.advantages-section:last-child {
+    margin-right: 0px;
+}
+
+.advantages-title {
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin: 0px 0px 10px 0px;
+    font-size: 14px;
+    color: var(--primary-text-color);
+}
+
+.advantages-p-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--p-text-color);
+}
+
+/*------------------ What are we doing ------------------*/
+
+.work-photos-section {
+    padding: 0px 0px 94px 0px;
+}
+
+.work-photos-box {
+    text-align: center;
+}
+
+.work-photos-title {
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 0px 0px 50px 0px;
+
+    color: var(--second-black);
+}
+
+.work-photos-list {
+    display: flex;
+}
+
+.work-photos-item {
+    margin: 0px 30px 0px 0px;
+}
+
+.work-photos-item:last-child {
+    margin-right: 0px;
+}
+
+
+/*------------------ Our team ------------------*/
+
+.team-section {
+    background-color: var(--background-comand-colorbackground-comand-color);
+}
+
+.team-section-title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+
+    color: var(--primary-text-color);
+
+    margin: 0px 0px 50px 0px;
+}
+
+.team-section-list {
+    display: flex;
+    justify-content: center;
+}
+
+.team-section-item {
+    margin: 0px 30px 0px 0px;
+    padding: 0px 0px 30px 0px;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--background-head-color);
+    outline-color: none;
+}
+
+.team-section-item:last-child {
+    margin-right: 0;
+}
+
+.team-section-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin: 30px 0px 10px 0px;
+
+    color: var(--primary-text-color);
+}
+
+.team-section-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+
+    color: #757575;
+}
+/*------------------ Portfolio page ------------------*/
+
+/*------------------ Portfolio navigation section ------------------*/
+
+.portfolio-section {}
+
+.portfolio-container {
+    padding: 94px 0px 94px 0px;
+}
+
+.portfolio-btns {
+    margin: 0px 0px 50px 0px;
+}
+
+.portfolio-btns-list {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-btn {
+    margin: 0px 8px 0px 0px;
+}
+
+.portfolio-btn:last-child {
+    margin-right: 0;
+}
+
+.button-nav {
+    display: block;
+    // width: 145px;
+    border-radius: 4px;
+    padding: 6px 22px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--second-black);
+    background-color: var(--grey-color);
+}
+
+.button-nav:hover,
+.button-nav:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: var(--white-color);
+    background: var(--blue-color);
+}
+
+.projects-portfolio {}
+
+.projects-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    margin: 0px 30px 30px 0px;
+    border: 1px solid rgba(238, 238, 238, 1);
+}
+
+.project-item:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.project-item:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
+}
+
+.project-item {}
+
+.project-img {
+    max-width: 370px;
+    // border: 1px solid rgba(238, 238, 238, 1);
+}
+
+.project-text-portfolio {
+    padding: 20px 20px;
+    line-height: 2;
+    border: 0px solid rgba(238, 238, 238, 1);
+    // letter-spacing: 0.06em;
+
+    color: var(--second-black);
+}
+
+.project-title {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: #212121;
+}
+
+.project-p-text {
+    font-weight: var(--font-w);
+    margin: 6px 0px 0px 0px;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+
+    color: #757575;
+}
